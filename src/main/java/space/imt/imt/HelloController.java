@@ -36,7 +36,9 @@ public class HelloController {
         check_b.setOnAction(event ->{
             height = Double.valueOf(height_f.getText());
             weight = Double.valueOf(weight_f.getText());
-            System.out.println(height + " " + weight);
+            imt = weight / (height * height) * 10000;
+            imt = Math.round(imt * 10) / 10.0;
+            imt_t.setText("" + imt);
         });
 
     }
